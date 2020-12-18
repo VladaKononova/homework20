@@ -12,13 +12,17 @@ console.log(`Coldest Days: ${frost}`);
 let duration = 0;
 let days = 1;
 
-for (let = 0; i < temperature.length; i++) {
-    if((temperature [i] < 0) && (temperature [i + 1] <0)) {
-        days++;
-    }else if(days > duration) {
-        duration = days;
-    }else{
-        days = 1;
+for (let i = 0; i < temperature.length; i++) {
+    days = days +1;
+    duration.push(days);
+}else {
+    days = 1;
+    }
+
+let maxTem = duration[0];
+for (let i = 0; i < duration.length; i++) {
+    if(duration[i] > maxTem) {
+        maxTem = duration[i];
     }
 }
 
